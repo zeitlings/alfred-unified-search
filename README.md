@@ -36,7 +36,7 @@ __Note__: Typing `*` as wildcard suffix lists all available web searches.
 
 ### Extending the Web Searches
 
-The most convenient way to include custom searches is to configure them using Alfred's internal [custom search](https://www.alfredapp.com/help/features/web-search/#custom) feature and enable integration with *Unified Search*.
+The most convenient way to include custom searches is to configure them using Alfred's internal [custom search](https://www.alfredapp.com/help/features/web-search/#custom) feature and enable integration with *Unified Search* in the [workflow's configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
 
 Alternatively, you can edit and customize `searches.config.pkl`, located in the workflow folder, and evaluate it to generate an updated version of `searches.json`, or edit this file directly. If you choose to do this, __be sure to back up your customizations before updating the workflow__ or your changes will be lost.
 
