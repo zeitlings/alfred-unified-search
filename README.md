@@ -12,7 +12,7 @@ Unified Search is an [Alfred](https://www.alfredapp.com/) workflow that provides
 
 Query with available web searches via the `us` keyword, [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/), [Universal Action](https://www.alfredapp.com/help/features/universal-actions/), or [Fallback Search](https://www.alfredapp.com/help/features/default-results/fallback-searches/). 
 
-![Unified Search Keyword Defaults](assets/images/preview/keyword1.png)
+<img src="assets/images/preview/keyword1.png" width="564px" />
 - <kbd>⇥</kbd> Enter explicit filter mode
 - <kbd>⌥</kbd> View web search URL
 - <kbd>⇧</kbd> View shorthand keyword (if available)
@@ -24,13 +24,11 @@ You can choose between two approaches that control the behavior of how the web s
 
 The explicit filter mode is always available by tapping <kbd>⇥</kbd>, but is optional when the behavior is set to __Filter Always__. This enables the suffix mode, which uses the last word of your query (the suffix) to try to find a matching web search instance. If a match is found, the suffix is removed from the query that will be sent to the website. 
 
-![Unified Search Keyword Suffix Search](assets/images/preview/keyword2.png)
+<img src="assets/images/preview/keyword2.png" width="564px" />
 
 If the behavior is set to __Filter on Tab__, it is mandatory to enter filter mode by tapping <kbd>⇥</kbd>, and only the default search instances will be displayed until you do.
 
-
-![Unified Search Keyword Explicit Search](assets/images/preview/keyword3.png)
-
+<img src="assets/images/preview/keyword3.png" width="564px" />
 
 __Note__: Typing `*` as wildcard suffix lists all available web searches.
 
@@ -46,9 +44,8 @@ Alternatively, you can edit and customize `searches.config.pkl`, located in the 
 
 You can add specific web searches to the default options or remove them via the internal configuration. You can also activate or deactivate them entirely.
 
-
-![](assets/images/preview/config1.png)
-![](assets/images/preview/config2.png)
+<img src="assets/images/preview/config1.png" width="564px" />
+<img src="assets/images/preview/config2.png" width="564px" />
 - <kbd>⌘</kbd><kbd>↩</kbd> Add to / Remove from defaults
 - <kbd>⌥</kbd><kbd>↩</kbd> Activate / Deactivate web search
 
