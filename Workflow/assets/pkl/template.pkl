@@ -1,0 +1,30 @@
+module WebSearches
+
+version: String = "1.0.0"
+author:  String = "Patrick Sy"
+updated: String = "2024-09-22"
+searches: Listing<WebSearch>
+
+class WebSearch {
+
+    // The unique identifier of the web search
+    //identifier: String(!isEmpty)
+
+    // The name of the web search
+    name: String(!isEmpty)
+
+    // The URL of the web search
+    url: String(!isEmpty)
+    
+    // An optional shorthand match sequence for the web search
+    shorthand: String?
+
+    // Whether the web search is active
+    active: Boolean = true
+
+    // Whether the web search is a preferred option
+    isDefault: Boolean = false
+
+    // An optional identifier for the icon
+    icon: String?
+}

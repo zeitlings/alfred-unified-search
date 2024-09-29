@@ -1,0 +1,891 @@
+{
+  "version": "1.0.0",
+  "author": "Patrick Sy",
+  "updated": "2024-09-22",
+  "searches": [
+    {
+      "name": "Google Search",
+      "url": "https://www.google.com/search?q={input}",
+      "shorthand": "G",
+      "active": true,
+      "isDefault": true,
+      "icon": "google"
+    },
+    {
+      "name": "Google Search (Verbatim)",
+      "url": "https://www.google.com/search?q={input}&tbs=li:1",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Search (Past Year)",
+      "url": "https://www.google.com/search?q={input}&tbs=qdr:y1",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Search (Past Month)",
+      "url": "https://www.google.com/search?q={input}&tbs=qdr:m1",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Search (Past 6 Months)",
+      "url": "https://www.google.com/search?q={input}&tbs=qdr:m6",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Search (Past Week)",
+      "url": "https://www.google.com/search?q={input}&tbs=qdr:w1",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Images",
+      "url": "https://www.google.com/search?q={input}&tbs=imgo:1,&tbm=isch",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Maps",
+      "url": "https://www.google.com/maps/search/{input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "googlemaps"
+    },
+    {
+      "name": "Google Search (PDF)",
+      "url": "https://www.google.com/search?q=filetype:pdf+{input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Search (PDF Verbatim)",
+      "url": "https://www.google.com/search?q=filetype:pdf+{input}&tbs=li:1",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Translate (to English)",
+      "url": "https://translate.google.com/?=auto&tl=en&text={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "googletranslate"
+    },
+    {
+      "name": "Google Translate (to German)",
+      "url": "https://translate.google.com/?=auto&tl=de&text={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "googletranslate"
+    },
+    {
+      "name": "Google Books",
+      "url": "https://www.google.com/search?tbm=bks&q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "DuckDuckGo Search",
+      "url": "https://duckduckgo.com/?q={input}",
+      "shorthand": "DDG",
+      "active": true,
+      "isDefault": true,
+      "icon": "ddg"
+    },
+    {
+      "name": "DuckDuckGo Search (AI Assist)",
+      "url": "https://duckduckgo.com/?q={input}&assist=true&ia=web",
+      "shorthand": "DDG",
+      "active": true,
+      "isDefault": false,
+      "icon": "ddg"
+    },
+    {
+      "name": "DuckDuckGo Images",
+      "url": "https://duckduckgo.com/?q={input}&iax=images&ia=images",
+      "active": true,
+      "isDefault": false,
+      "icon": "ddg"
+    },
+    {
+      "name": "Qwant",
+      "url": "https://www.qwant.com/?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Qwant (Images)",
+      "url": "https://www.qwant.com/?q={input}&t=images",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Yandex",
+      "url": "https://yandex.com/search/?text={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Yandex (Images)",
+      "url": "https://yandex.com/images/search/?text={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Brave Search",
+      "url": "https://search.brave.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "brave"
+    },
+    {
+      "name": "Brave Images",
+      "url": "https://search.brave.com/images?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "brave"
+    },
+    {
+      "name": "Ecosia",
+      "url": "https://www.ecosia.org/search?method=index&q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Ecosia (Images)",
+      "url": "https://www.ecosia.org/images?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Ecosia (AI Chat)",
+      "url": "https://www.ecosia.org/chat?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Ecosia News",
+      "url": "https://www.ecosia.org/news?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Claude",
+      "url": "https://claude.ai/new?q={input}",
+      "shorthand": "C",
+      "active": true,
+      "isDefault": false,
+      "icon": "anthropic"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com/?q={input}",
+      "shorthand": "GPT",
+      "active": true,
+      "isDefault": false,
+      "icon": "openai"
+    },
+    {
+      "name": "Perplexity",
+      "url": "https://www.perplexity.ai/?q={input}",
+      "shorthand": "PP",
+      "active": true,
+      "isDefault": false,
+      "icon": "perplexity"
+    },
+    {
+      "name": "Microsoft Copilot",
+      "url": "https://copilot.microsoft.com/?showconv=1&sendquery=1&q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "copilot"
+    },
+    {
+      "name": "Consensus",
+      "url": "https://consensus.app/results/?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "consensus"
+    },
+    {
+      "name": "Blackbox.ai",
+      "url": "https://blackbox.ai/?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Brave Search (Answer with AI)",
+      "url": "https://search.brave.com/search?q={input}&source=llmSuggest&summary=1",
+      "active": true,
+      "isDefault": false,
+      "icon": "brave"
+    },
+    {
+      "name": "Andi (AI Search)",
+      "url": "https://andisearch.com/?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "andi"
+    },
+    {
+      "name": "Bagoodex (AI Search)",
+      "url": "https://bagoodex.io/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "bagoodex"
+    },
+    {
+      "name": "You.com Chat",
+      "url": "https://you.com/search?q={input}&tbm=youchat",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Exa.ai",
+      "url": "https://exa.ai/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "exa"
+    },
+    {
+      "name": "Phind (AI Dev Search Engine)",
+      "url": "https://phind.com/search?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "iAsk AI",
+      "url": "https://iask.ai/?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "iask"
+    },
+    {
+      "name": "DeepL Translate (Auto to Auto)",
+      "url": "https://www.deepl.com/translator#any/any/{input}",
+      "shorthand": "DPL",
+      "active": true,
+      "isDefault": false,
+      "icon": "deepl"
+    },
+    {
+      "name": "DeepL Translate (Auto to English)",
+      "url": "https://www.deepl.com/translator#auto/en/{input}",
+      "shorthand": "DPL",
+      "active": true,
+      "isDefault": false,
+      "icon": "deepl"
+    },
+    {
+      "name": "DeepL Translate (Auto to German)",
+      "url": "https://www.deepl.com/translator#auto/de/{input}",
+      "shorthand": "DPL",
+      "active": true,
+      "isDefault": false,
+      "icon": "deepl"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "github"
+    },
+    {
+      "name": "GitHub Gist",
+      "url": "https://gist.github.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "github"
+    },
+    {
+      "name": "DevDocs",
+      "url": "https://devdocs.io/#q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Dev.to",
+      "url": "https://dev.to/search?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Kaggle",
+      "url": "https://www.kaggle.com/search?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Stack Overflow",
+      "url": "https://stackoverflow.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "stackoverflow"
+    },
+    {
+      "name": "Stack Overflow (Newest)",
+      "url": "https://stackoverflow.com/search?tab=newest&q={input}&searchOn=3",
+      "active": true,
+      "isDefault": false,
+      "icon": "stackoverflow"
+    },
+    {
+      "name": "Stack Overflow (Active)",
+      "url": "https://stackoverflow.com/search?tab=active&q={input}&searchOn=3",
+      "active": true,
+      "isDefault": false,
+      "icon": "stackoverflow"
+    },
+    {
+      "name": "Stack Overflow (Score)",
+      "url": "https://stackoverflow.com/search?tab=votes&q={input}&searchOn=3",
+      "active": true,
+      "isDefault": false,
+      "icon": "stackoverflow"
+    },
+    {
+      "name": "Google Scholar (English)",
+      "url": "https://scholar.google.com/scholar?hl=en&q={input}",
+      "shorthand": "GS",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Scholar (German)",
+      "url": "https://scholar.google.com/scholar?hl=de&q={input}",
+      "shorthand": "GS",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Google Scholar (Auto)",
+      "url": "https://scholar.google.com/scholar?q={input}",
+      "shorthand": "GS",
+      "active": true,
+      "isDefault": false,
+      "icon": "google"
+    },
+    {
+      "name": "Connected Papers",
+      "url": "https://www.connectedpapers.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "connectedpapers"
+    },
+    {
+      "name": "Researcher Discovery",
+      "url": "https://discovery.researcher.life/search?search={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Dimensions.ai",
+      "url": "https://app.dimensions.ai/discover/publication?search_mode=content&search_text={input}&search_type=kws&search_field=full_search",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "OpenAIRE (Scholarly Knowledge Graph)",
+      "url": "https://explore.openaire.eu/search/find?fv0={input}&f0=q",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "JSTOR",
+      "url": "https://www.jstor.org/action/doBasicSearch?Query={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "jstor"
+    },
+    {
+      "name": "JURN (Open Access Search)",
+      "url": "https://www.jurn.link/?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "GRAFT (Global Repository Access Full-Text)",
+      "url": "https://www.jurn.link/graft/?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "CORE (Open Access Search)",
+      "url": "https://core.ac.uk/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "core"
+    },
+    {
+      "name": "Semantic Scholar",
+      "url": "https://www.semanticscholar.org/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "semanticscholar"
+    },
+    {
+      "name": "OpenAlex",
+      "url": "https://openalex.org/works?page=1&filter=default.search:{input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "openalex"
+    },
+    {
+      "name": "BASE (Bielefeld Academic Search Engine)",
+      "url": "https://www.base-search.net/Search/Results?lookfor={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "UniCat (Union Catalogue of Belgian Libraries)",
+      "url": "https://unicat.be/uniCat?func=search&uiLanguage=en&query={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Project MUSE",
+      "url": "https://muse.jhu.edu/search?action=search&query={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/search/searcher.py?query={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "sep"
+    },
+    {
+      "name": "WorldCat",
+      "url": "https://www.worldcat.org/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "worldcat"
+    },
+    {
+      "name": "Bing Search",
+      "url": "https://www.bing.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "bing"
+    },
+    {
+      "name": "Bing Images",
+      "url": "https://www.bing.com/images/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "bing"
+    },
+    {
+      "name": "Bing Translator",
+      "url": "https://www.bing.com/translator?text={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "bing"
+    },
+    {
+      "name": "Bing Maps",
+      "url": "https://www.bing.com/maps?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "bing"
+    },
+    {
+      "name": "Bing News",
+      "url": "https://www.bing.com/news/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "bing"
+    },
+    {
+      "name": "Bing Search (Chat)",
+      "url": "https://www.bing.com/chat?showconv=1&sendquery=1&q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "copilot"
+    },
+    {
+      "name": "Youtube Search",
+      "url": "https://www.youtube.com/results?search_query={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "youtube"
+    },
+    {
+      "name": "Twitter / X",
+      "url": "https://x.com/search?q={input}",
+      "shorthand": "X",
+      "active": true,
+      "isDefault": false,
+      "icon": "twitter"
+    },
+    {
+      "name": "Twitter / X (Latest)",
+      "url": "https://x.com/search?f=tweets&q={input}",
+      "shorthand": "XL",
+      "active": true,
+      "isDefault": false,
+      "icon": "twitter"
+    },
+    {
+      "name": "Twitter / X (Hashtag)",
+      "url": "https://x.com/search?q=%23{input}",
+      "shorthand": "XH",
+      "active": true,
+      "isDefault": false,
+      "icon": "twitter"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://www.tiktok.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "tiktok"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/explore/tags/{input}",
+      "shorthand": "IG",
+      "active": true,
+      "isDefault": false,
+      "icon": "instagram"
+    },
+    {
+      "name": "Amazon.com",
+      "url": "https://www.amazon.com/s?k={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "amazon"
+    },
+    {
+      "name": "Amazon.de",
+      "url": "https://www.amazon.de/s?k={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "amazon"
+    },
+    {
+      "name": "Amazon.co.uk",
+      "url": "https://www.amazon.co.uk/s?k={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "amazon"
+    },
+    {
+      "name": "Etsy",
+      "url": "https://www.etsy.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "etsy"
+    },
+    {
+      "name": "ebay",
+      "url": "https://www.ebay.com/sch/i.html?_nkw={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "ebay"
+    },
+    {
+      "name": "AbeBooks",
+      "url": "https://www.abebooks.com/servlet/SearchResults?tn={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Wikipedia (English)",
+      "url": "https://en.wikipedia.org/w/index.php?search={input}",
+      "shorthand": "W",
+      "active": true,
+      "isDefault": false,
+      "icon": "wiki"
+    },
+    {
+      "name": "Wikipedia (German)",
+      "url": "https://de.wikipedia.org/w/index.php?search={input}",
+      "shorthand": "W",
+      "active": true,
+      "isDefault": false,
+      "icon": "wiki"
+    },
+    {
+      "name": "Wiktionary (English)",
+      "url": "https://en.wiktionary.org/w/index.php?search={input}",
+      "shorthand": "W",
+      "active": true,
+      "isDefault": false,
+      "icon": "wiki"
+    },
+    {
+      "name": "Wiktionary (German)",
+      "url": "https://de.wiktionary.org/w/index.php?search={input}",
+      "shorthand": "W",
+      "active": true,
+      "isDefault": false,
+      "icon": "wiki"
+    },
+    {
+      "name": "Wolfram Alpha",
+      "url": "https://www.wolframalpha.com/input/?i={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "wolfram"
+    },
+    {
+      "name": "Reddit",
+      "url": "https://www.reddit.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "reddit"
+    },
+    {
+      "name": "Reddit (Newest)",
+      "url": "https://www.reddit.com/search?q={input}&sort=new",
+      "active": true,
+      "isDefault": false,
+      "icon": "reddit"
+    },
+    {
+      "name": "Urban Dictionary",
+      "url": "https://www.urbandictionary.com/define.php?term={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Thesaurus.com",
+      "url": "https://www.thesaurus.com/browse/{input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "OpenThesaurus.de",
+      "url": "https://www.openthesaurus.de/synonyme/{input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Merriam-Webster",
+      "url": "https://www.merriam-webster.com/dictionary/{input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Dictionary.com",
+      "url": "https://www.dictionary.com/browse/{input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "DWDS (Der deutsche Wortschatz)",
+      "url": "https://www.dwds.de/wb/{input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "imgur",
+      "url": "https://imgur.com/search?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Hacker News (Stories, by Popularity)",
+      "url": "https://hn.algolia.com/?query={input}&sort=byPopularity&prefix&page=0&dateRange=all&type=story",
+      "active": true,
+      "isDefault": false,
+      "icon": "hackernews"
+    },
+    {
+      "name": "Hacker News (Stories, by Date)",
+      "url": "https://hn.algolia.com/?query={input}&sort=byDate&prefix&page=0&dateRange=all&type=story",
+      "active": true,
+      "isDefault": false,
+      "icon": "hackernews"
+    },
+    {
+      "name": "Pinterest",
+      "url": "https://www.pinterest.com/search/pins/?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "pinterest"
+    },
+    {
+      "name": "Quora",
+      "url": "https://www.quora.com/search?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "quora"
+    },
+    {
+      "name": "GIPHY",
+      "url": "https://giphy.com/search/{input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "arXiv",
+      "url": "https://arxiv.org/search/?query={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "arxiv"
+    },
+    {
+      "name": "Internet Archive",
+      "url": "https://archive.org/search?query={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "internet-archive"
+    },
+    {
+      "name": "WordSense Dictionary",
+      "url": "https://www.wordsense.eu/{input}/",
+      "active": true,
+      "isDefault": false,
+      "icon": "wordsense"
+    },
+    {
+      "name": "WordBedeutung Wörterbuch",
+      "url": "https://www.wortbedeutung.info/{input}/",
+      "active": true,
+      "isDefault": false,
+      "icon": "wortbedeutung"
+    },
+    {
+      "name": "IMDB (Internet Movie Database)",
+      "url": "https://www.imdb.com/find?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "imdb"
+    },
+    {
+      "name": "Rotten Tomatoes",
+      "url": "https://www.rottentomatoes.com/search/?search={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "rottentomatoes"
+    },
+    {
+      "name": "OpenBSD Terminal Commands",
+      "url": "https://man.openbsd.org/{input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Alfred",
+      "url": "https://www.alfredapp.com/search/?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "alfred"
+    },
+    {
+      "name": "AlternativeTo",
+      "url": "https://alternativeto.net/browse/search?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "libgen (Library Genesis)",
+      "url": "https://libgen.is/search.php?req={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Medium",
+      "url": "https://medium.com/search?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Hugging Face",
+      "url": "https://huggingface.co/search/full-text?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "huggingface"
+    },
+    {
+      "name": "Hugging Face (Models)",
+      "url": "https://huggingface.co/search/full-text?q={input}&type=model",
+      "active": true,
+      "isDefault": false,
+      "icon": "huggingface"
+    },
+    {
+      "name": "Hugging Face (Datasets)",
+      "url": "https://huggingface.co/search/full-text?q={input}&type=dataset",
+      "active": true,
+      "isDefault": false,
+      "icon": "huggingface"
+    },
+    {
+      "name": "Hugging Face (Spaces)",
+      "url": "https://huggingface.co/search/full-text?q={input}&type=space",
+      "active": true,
+      "isDefault": false,
+      "icon": "huggingface"
+    },
+    {
+      "name": "Acronym Finder",
+      "url": "https://www.acronymfinder.com/~/search/af.aspx?string=exact&Acronym={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "GoodReads",
+      "url": "https://www.goodreads.com/search?q={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "The Noun Project (Icons)",
+      "url": "https://thenounproject.com/search/icons/?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "thenounproject"
+    },
+    {
+      "name": "UXWing (Icons)",
+      "url": "https://www.uxwing.com/?s={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "uxwing"
+    },
+    {
+      "name": "IconApe",
+      "url": "https://iconape.com/?s={input}",
+      "active": true,
+      "isDefault": false
+    },
+    {
+      "name": "Apple Maps",
+      "url": "maps://maps.apple.com/?q={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "applemaps"
+    },
+    {
+      "name": "Mac App Store",
+      "url": "macappstore://itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term={input}",
+      "active": true,
+      "isDefault": false,
+      "icon": "appstore"
+    }
+  ]
+}

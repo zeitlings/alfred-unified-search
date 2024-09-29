@@ -1,0 +1,817 @@
+amends "template.pkl"
+
+// WebSearches Options.
+//
+// Created by Patrick Sy 2024.
+
+searches {
+
+    // Google Searches
+    new {
+        name = "Google Search"
+        url = "https://www.google.com/search?q={input}"
+        shorthand = "G"
+        isDefault = true
+        icon = "google"
+    }
+
+    new {
+        name = "Google Search (Verbatim)"
+        url = "https://www.google.com/search?q={input}&tbs=li:1"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Search (Past Year)"
+        url = "https://www.google.com/search?q={input}&tbs=qdr:y1"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Search (Past Month)"
+        url = "https://www.google.com/search?q={input}&tbs=qdr:m1"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Search (Past 6 Months)"
+        url = "https://www.google.com/search?q={input}&tbs=qdr:m6"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Search (Past Week)"
+        url = "https://www.google.com/search?q={input}&tbs=qdr:w1"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Images"
+        url = "https://www.google.com/search?q={input}&tbs=imgo:1,&tbm=isch"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Maps"
+        url = "https://www.google.com/maps/search/{input}"
+        icon = "googlemaps"
+    }
+
+    new {
+        name = "Google Search (PDF)"
+        url = "https://www.google.com/search?q=filetype:pdf+{input}"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Search (PDF Verbatim)"
+        url = "https://www.google.com/search?q=filetype:pdf+{input}&tbs=li:1"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Translate (to English)"
+        url = "https://translate.google.com/?=auto&tl=en&text={input}"
+        icon = "googletranslate"
+    }
+
+    new {
+        name = "Google Translate (to German)"
+        url = "https://translate.google.com/?=auto&tl=de&text={input}"
+        icon = "googletranslate"
+    }
+
+    new {
+        name = "Google Books"
+        url = "https://www.google.com/search?tbm=bks&q={input}"
+        icon = "google"
+    }
+
+    // DuckDuckGo Searches
+    new {
+        name = "DuckDuckGo Search"
+        url = "https://duckduckgo.com/?q={input}"
+        icon = "ddg"
+        shorthand = "DDG"
+        isDefault = true
+    }
+
+    new {
+        name = "DuckDuckGo Search (AI Assist)"  
+        url = "https://duckduckgo.com/?q={input}&assist=true&ia=web"
+        icon = "ddg"
+        shorthand = "DDG"
+    }
+
+    new {
+        name = "DuckDuckGo Images"
+        url = "https://duckduckgo.com/?q={input}&iax=images&ia=images"
+        icon = "ddg"
+    }
+
+    // Other Search Engines
+
+    new {
+        name = "Qwant"
+        url = "https://www.qwant.com/?q={input}"
+    }
+
+    new {
+        name = "Qwant (Images)"
+        url = "https://www.qwant.com/?q={input}&t=images"
+    }
+
+    new {
+        name = "Yandex"
+        url = "https://yandex.com/search/?text={input}"
+    }
+
+    new {
+        name = "Yandex (Images)"
+        url = "https://yandex.com/images/search/?text={input}"
+    }
+
+    new {
+        name = "Brave Search"
+        url = "https://search.brave.com/search?q={input}"
+        icon = "brave"
+    }
+
+    new {
+        name = "Brave Images"
+        url = "https://search.brave.com/images?q={input}" 
+        icon = "brave"
+    }
+
+    new {
+        name = "Ecosia"
+        url = "https://www.ecosia.org/search?method=index&q={input}"
+    }
+
+    new {
+        name = "Ecosia (Images)"
+        url = "https://www.ecosia.org/images?q={input}"
+    }
+
+    new {
+        name = "Ecosia (AI Chat)"
+        url = "https://www.ecosia.org/chat?q={input}"
+    }
+
+    new {
+        name = "Ecosia News"
+        url = "https://www.ecosia.org/news?q={input}"
+    }
+
+
+
+
+    // AI Searches
+    new {
+        name = "Claude"
+        url = "https://claude.ai/new?q={input}"
+        shorthand = "C"
+        isDefault = false
+        icon = "anthropic"
+    }
+
+    new {
+        name = "ChatGPT"
+        url = "https://chatgpt.com/?q={input}"
+        shorthand = "GPT"
+        isDefault = false
+        icon = "openai"
+    }
+
+    new {
+        name = "Perplexity"
+        url = "https://www.perplexity.ai/?q={input}"
+        shorthand = "PP"
+        icon = "perplexity"
+    }
+
+    new {
+        name = "Microsoft Copilot"
+        url = "https://copilot.microsoft.com/?showconv=1&sendquery=1&q={input}"
+        icon = "copilot"
+    }
+
+    new {
+        name = "Consensus"
+        url = "https://consensus.app/results/?q={input}"
+        icon = "consensus"
+    }
+
+    new { 
+        name = "Blackbox.ai"
+        url = "https://blackbox.ai/?q={input}"
+        //icon = "blackbox"
+    }
+    
+    new {   
+        name = "Brave Search (Answer with AI)"
+        url = "https://search.brave.com/search?q={input}&source=llmSuggest&summary=1"
+        icon = "brave"
+    }
+
+    new { 
+        name = "Andi (AI Search)"
+        url = "https://andisearch.com/?q={input}"
+        icon = "andi"
+    }
+
+
+    new {
+        name = "Bagoodex (AI Search)"
+        url = "https://bagoodex.io/search?q={input}"
+        icon = "bagoodex"
+    }
+
+
+    new {
+        name = "You.com Chat"
+        url = "https://you.com/search?q={input}&tbm=youchat"
+    }
+
+    new {
+        name = "Exa.ai"
+        url = "https://exa.ai/search?q={input}"
+        icon = "exa"
+    }
+
+    new {
+        name = "Phind (AI Dev Search Engine)"
+        url = "https://phind.com/search?q={input}"
+    }
+
+    new {
+        name = "iAsk AI"
+        url = "https://iask.ai/?q={input}"
+        icon = "iask"
+    }
+
+    new {
+        name = "DeepL Translate (Auto to Auto)"
+        url = "https://www.deepl.com/translator#any/any/{input}"
+        shorthand = "DPL"
+        isDefault = false
+        icon = "deepl"
+    }
+
+    new {
+        name = "DeepL Translate (Auto to English)"
+        url = "https://www.deepl.com/translator#auto/en/{input}"
+        shorthand = "DPL"
+        icon = "deepl"
+    }
+
+    new {
+        name = "DeepL Translate (Auto to German)"
+        url = "https://www.deepl.com/translator#auto/de/{input}"
+        shorthand = "DPL"
+        icon = "deepl"
+    }
+
+    // Developer Searches
+    new {
+        name = "GitHub"
+        url = "https://github.com/search?q={input}"
+        icon = "github"
+    }
+
+    new {
+        name = "GitHub Gist"
+        url = "https://gist.github.com/search?q={input}"
+        icon = "github"
+    }
+
+    new {
+        name = "DevDocs"
+        url = "https://devdocs.io/#q={input}"
+    }
+
+    new {
+        name = "Dev.to"
+        url = "https://dev.to/search?q={input}"
+    }
+
+    new {
+        name = "Kaggle"
+        url = "https://www.kaggle.com/search?q={input}"
+    }
+
+    new {
+        name = "Stack Overflow"
+        url = "https://stackoverflow.com/search?q={input}"
+        icon = "stackoverflow"
+    }
+
+    new {
+        name = "Stack Overflow (Newest)"
+        url = "https://stackoverflow.com/search?tab=newest&q={input}&searchOn=3"
+        icon = "stackoverflow"
+    }
+
+    new {
+        name = "Stack Overflow (Active)"
+        url = "https://stackoverflow.com/search?tab=active&q={input}&searchOn=3"
+        icon = "stackoverflow"
+    }
+
+    new {
+        name = "Stack Overflow (Score)"
+        url = "https://stackoverflow.com/search?tab=votes&q={input}&searchOn=3"
+        icon = "stackoverflow"
+    }
+
+
+
+    // Academic Searches
+    new {
+        name = "Google Scholar (English)"
+        //url = "https://scholar.google.com/scholar?q={input}"
+        url = "https://scholar.google.com/scholar?hl=en&q={input}"
+        shorthand = "GS"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Scholar (German)"
+        url = "https://scholar.google.com/scholar?hl=de&q={input}"
+        shorthand = "GS"
+        icon = "google"
+    }
+
+    new {
+        name = "Google Scholar (Auto)"
+        url = "https://scholar.google.com/scholar?q={input}"
+        shorthand = "GS"
+        icon = "google"
+    }
+
+    new { 
+        name = "Connected Papers"
+        url = "https://www.connectedpapers.com/search?q={input}"
+        icon = "connectedpapers"
+    }
+
+    new {
+        name = "Researcher Discovery"
+        url = "https://discovery.researcher.life/search?search={input}"
+    }
+
+    new {
+        name = "Dimensions.ai" 
+        url = "https://app.dimensions.ai/discover/publication?search_mode=content&search_text={input}&search_type=kws&search_field=full_search"
+        //icon = "dimensions"
+    }
+
+    new {
+        name = "OpenAIRE (Scholarly Knowledge Graph)"
+        url = "https://explore.openaire.eu/search/find?fv0={input}&f0=q"
+    }
+
+    new {
+        name = "PubMed"
+        url = "https://pubmed.ncbi.nlm.nih.gov/?term={input}"
+    }
+
+    new {
+        name = "JSTOR"
+        url = "https://www.jstor.org/action/doBasicSearch?Query={input}"
+        icon = "jstor"
+    }
+
+    new {
+        name = "JURN (Open Access Search)"
+        //url = "https://cse.google.com/cse?cx=001678998038845839442:qbyvquy93ik&q={input}" 
+        url = "https://www.jurn.link/?q={input}"
+    }
+
+    new {
+        name = "GRAFT (Global Repository Access Full-Text)"
+        //url = "https://cse.google.com/cse?cx=017986067167581999535:rnewgrysmpe&q={input}" 
+        url = "https://www.jurn.link/graft/?q={input}"
+    }
+
+    new {
+        name = "CORE (Open Access Search)"
+        url = "https://core.ac.uk/search?q={input}"
+        icon = "core"
+    }
+
+    //new {
+    //    name = "DOAJ (Directory of Open Access Journals)"
+    //    url = "https://doaj.org/search/articles?query_string={input}"
+    //}
+
+    new {
+        name = "Semantic Scholar"
+        url = "https://www.semanticscholar.org/search?q={input}"
+        icon = "semanticscholar"
+    }
+
+    new {
+        name = "OpenAlex"
+        //url = "https://openalex.org/works?page=1&filter=default.search%3A{input}"
+        url = "https://openalex.org/works?page=1&filter=default.search:{input}"
+        icon = "openalex"
+    }
+
+    new {
+        name = "BASE (Bielefeld Academic Search Engine)"
+        url = "https://www.base-search.net/Search/Results?lookfor={input}"
+    }
+
+    new {
+        name = "UniCat (Union Catalogue of Belgian Libraries)"
+        url = "https://unicat.be/uniCat?func=search&uiLanguage=en&query={input}"
+    }
+
+    new {
+        name = "Project MUSE"
+        url = "https://muse.jhu.edu/search?action=search&query={input}"
+    }
+
+    new {
+        name = "Stanford Encyclopedia of Philosophy"
+        url = "https://plato.stanford.edu/search/searcher.py?query={input}"
+        icon = "sep"
+    }
+
+    new {
+        name = "WorldCat"
+        url = "https://www.worldcat.org/search?q={input}"
+        icon = "worldcat"
+    }
+
+
+    // Bing Searches
+    new {
+        name = "Bing Search"
+        url = "https://www.bing.com/search?q={input}"
+        icon = "bing"
+    }
+
+    new {
+        name = "Bing Images"
+        url = "https://www.bing.com/images/search?q={input}"
+        icon = "bing"
+    }
+
+    new {
+        name = "Bing Translator"
+        url = "https://www.bing.com/translator?text={input}"
+        icon = "bing"
+    }
+
+    new { 
+        name = "Bing Maps"
+        url = "https://www.bing.com/maps?q={input}"
+        icon = "bing"
+    }
+
+    new {
+        name = "Bing News"
+        url = "https://www.bing.com/news/search?q={input}"
+        icon = "bing"
+    }
+
+    new {
+        name = "Bing Search (Chat)"
+        url = "https://www.bing.com/chat?showconv=1&sendquery=1&q={input}"
+        icon = "copilot"
+    }
+
+    // Youtube Searches
+    new {
+        name = "Youtube Search"
+        url = "https://www.youtube.com/results?search_query={input}"
+        icon = "youtube"
+    }
+
+
+
+    // Twitter / X
+    new {
+        name = "Twitter / X"
+        url = "https://x.com/search?q={input}"
+        shorthand = "X"
+        icon = "twitter"
+    }
+
+    new {
+        name = "Twitter / X (Latest)"
+        url = "https://x.com/search?f=tweets&q={input}"
+        shorthand = "XL"
+        icon = "twitter"
+    }
+
+    new {
+        name = "Twitter / X (Hashtag)"
+        url = "https://x.com/search?q=%23{input}"
+        shorthand = "XH"
+        icon = "twitter"
+    }
+
+    new {
+        name = "TikTok"
+        url = "https://www.tiktok.com/search?q={input}"
+        icon = "tiktok"
+    }
+
+    new {
+        name = "Instagram"
+        url = "https://www.instagram.com/explore/tags/{input}"
+        shorthand = "IG"
+        icon = "instagram"
+    }
+
+
+
+    // Shopping
+    new {
+        name = "Amazon.com"
+        url = "https://www.amazon.com/s?k={input}"
+        icon = "amazon"
+    }
+
+    new {
+        name = "Amazon.de"
+        url = "https://www.amazon.de/s?k={input}"
+        icon = "amazon"
+    }
+
+    new {
+        name = "Amazon.co.uk"
+        url = "https://www.amazon.co.uk/s?k={input}"
+        icon = "amazon"
+    }
+
+    new {
+        name = "Etsy"
+        url = "https://www.etsy.com/search?q={input}"
+        icon = "etsy"
+    }
+
+    new {
+        name = "ebay"
+        url = "https://www.ebay.com/sch/i.html?_nkw={input}"
+        icon = "ebay"
+    }
+
+    new {
+        name = "AbeBooks"
+        url = "https://www.abebooks.com/servlet/SearchResults?tn={input}"
+    }
+
+
+
+    // Various Searches
+    new {
+        name = "Wikipedia (English)"
+        url = "https://en.wikipedia.org/w/index.php?search={input}"
+        shorthand = "W"
+        icon = "wiki"
+    }
+
+    new {   
+        name = "Wikipedia (German)"
+        url = "https://de.wikipedia.org/w/index.php?search={input}"
+        shorthand = "W"
+        icon = "wiki"
+    }
+
+    new {   
+        name = "Wiktionary (English)"
+        url = "https://en.wiktionary.org/w/index.php?search={input}"
+        shorthand = "W"
+        icon = "wiki"
+    }
+
+    new {   
+        name = "Wiktionary (German)"
+        url = "https://de.wiktionary.org/w/index.php?search={input}"
+        shorthand = "W"
+        icon = "wiki"
+    }
+
+    new {
+        name = "Wolfram Alpha"
+        url = "https://www.wolframalpha.com/input/?i={input}"
+        icon = "wolfram"
+    }
+
+    new {
+        name = "Reddit"
+        url = "https://www.reddit.com/search?q={input}"
+        icon = "reddit"
+    }
+
+    new {
+        name = "Reddit (Newest)"
+        url = "https://www.reddit.com/search?q={input}&sort=new"
+        icon = "reddit"
+    }
+
+    new {
+        name = "Urban Dictionary"
+        url = "https://www.urbandictionary.com/define.php?term={input}"
+    }
+
+    new {
+        name = "Thesaurus.com"
+        url = "https://www.thesaurus.com/browse/{input}"
+    }
+
+    new {
+        name = "OpenThesaurus.de"
+        url = "https://www.openthesaurus.de/synonyme/{input}"
+    }
+
+    new {
+        name = "Merriam-Webster"
+        url = "https://www.merriam-webster.com/dictionary/{input}"
+    }
+
+    new {
+        name = "Dictionary.com"
+        url = "https://www.dictionary.com/browse/{input}"
+    }
+
+    new {
+        name = "DWDS (Der deutsche Wortschatz)"
+        url = "https://www.dwds.de/wb/{input}"
+    }
+
+    new {
+        name = "imgur"
+        url = "https://imgur.com/search?q={input}"
+    }
+
+    new {
+        name = "Hacker News (Stories, by Popularity)"
+        url = "https://hn.algolia.com/?query={input}&sort=byPopularity&prefix&page=0&dateRange=all&type=story"
+        icon = "hackernews"
+    }
+
+    new {
+        name = "Hacker News (Stories, by Date)"
+        url = "https://hn.algolia.com/?query={input}&sort=byDate&prefix&page=0&dateRange=all&type=story"
+        icon = "hackernews"
+    }
+
+    new {
+        name = "Pinterest"
+        url = "https://www.pinterest.com/search/pins/?q={input}"
+        icon = "pinterest"
+    }
+
+    new {
+        name = "Quora"
+        url = "https://www.quora.com/search?q={input}"
+        icon = "quora"
+    }
+
+    new {
+        name = "GIPHY"
+        url = "https://giphy.com/search/{input}"
+    }
+
+    new {
+        name = "arXiv"
+        url = "https://arxiv.org/search/?query={input}"
+        icon = "arxiv"
+    }
+
+    new {
+        name = "Internet Archive"
+        url = "https://archive.org/search?query={input}"
+        icon = "internet-archive"
+    }
+
+    new {
+        name = "WordSense Dictionary"
+        url = "https://www.wordsense.eu/{input}/"
+        icon = "wordsense"
+    }
+
+    new {
+        name = "WordBedeutung Wörterbuch"
+        url = "https://www.wortbedeutung.info/{input}/"
+        icon = "wortbedeutung"
+    }
+
+    new { 
+        name = "IMDB (Internet Movie Database)"
+        url = "https://www.imdb.com/find?q={input}"
+        icon = "imdb"
+    }
+
+    new { 
+        name = "Rotten Tomatoes"
+        url = "https://www.rottentomatoes.com/search/?search={input}"
+        icon = "rottentomatoes"
+    }
+
+    new {
+        name = "OpenBSD Terminal Commands"
+        url = "https://man.openbsd.org/{input}"
+    }
+
+    new {
+        name = "Alfred"
+        url = "https://www.alfredapp.com/search/?q={input}"
+        icon = "alfred"
+    }
+
+    new {
+        name = "AlternativeTo"
+        url = "https://alternativeto.net/browse/search?q={input}"
+    }
+
+    new {
+        name = "libgen (Library Genesis)"
+        url = "https://libgen.is/search.php?req={input}"
+    }
+
+    //new {
+    //    name = "Aaaarg"
+    //    url = "https://aaaaarg.fail/?q={input}"
+    //}
+
+    new {
+        name = "Medium"
+        url = "https://medium.com/search?q={input}"
+    }
+
+    new { 
+        name = "Hugging Face"
+        url = "https://huggingface.co/search/full-text?q={input}"
+        icon = "huggingface"
+    }
+
+    new { 
+        name = "Hugging Face (Models)"
+        url = "https://huggingface.co/search/full-text?q={input}&type=model"
+        icon = "huggingface"
+    }
+
+    new { 
+        name = "Hugging Face (Datasets)"
+        url = "https://huggingface.co/search/full-text?q={input}&type=dataset"
+        icon = "huggingface"
+    }
+
+    new { 
+        name = "Hugging Face (Spaces)"
+        url = "https://huggingface.co/search/full-text?q={input}&type=space"
+        icon = "huggingface"
+    }
+
+    new {
+        name = "Acronym Finder"
+        url = "https://www.acronymfinder.com/~/search/af.aspx?string=exact&Acronym={input}"
+    }
+
+    new { 
+        name = "GoodReads"
+        url = "https://www.goodreads.com/search?q={input}"
+    }
+
+
+
+
+    // Graphics (Icons)
+    new {
+        name = "The Noun Project (Icons)"
+        url = "https://thenounproject.com/search/icons/?q={input}"
+        icon = "thenounproject"
+    }
+
+    new {
+        name = "UXWing (Icons)"
+        url = "https://www.uxwing.com/?s={input}"
+        icon = "uxwing"
+    }
+
+    new {
+        name = "IconApe"
+        url = "https://iconape.com/?s={input}"
+    }
+
+    
+    // Apps
+    new { 
+        name = "Apple Maps"
+        url = "maps://maps.apple.com/?q={input}"
+        icon = "applemaps"
+    }
+
+    new {
+        name = "Mac App Store"
+        url = "macappstore://itunes.apple.com/WebObjects/MZSearch.woa/wa/search?media=software&term={input}"
+        icon = "appstore"
+    }
+
+}
