@@ -1,4 +1,7 @@
-<h1 align="center"><img src="assets/images/logo.png" width="175" height="175"></br>Unified Search</h1>
+<div align="center">
+<h1><img src="assets/images/logo.png" width="175" height="175"></br>Unified Search</h1>
+<a href="https://github.com/zeitlings/alfred-unified-search/releases/latest"><img src="https://img.shields.io/github/v/release/zeitlings/alfred-unified-search?logo=alfred&label=download" alt="GitHub Release"></a><br><br>
+</div>
 
 
 Unified Search is an [Alfred](https://www.alfredapp.com/) workflow that provides a unified search experience across multiple web search engines and websites, currently supporting 129 web search instances and extensible through Alfred's internal [custom web search](https://www.alfredapp.com/help/features/web-search/#custom) feature.
