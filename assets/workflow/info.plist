@@ -209,7 +209,7 @@
 	<key>createdby</key>
 	<string>Patrick Sy</string>
 	<key>description</key>
-	<string>Postfix searches - Haste Clone</string>
+	<string>Custom web search aggregator</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -546,7 +546,7 @@
 	<string>![Unified Search Workflow Icon](icon.png)
 
 ---
-Created by [Patrick Sy](https://github.com/zeitlings) | [Github](https://github.com/zeitlings/alfred-unified-search) | [Alfred Forum](https://www.alfredforum.com/topic/21910-ayai-%C2%B7-gpt-nexus-chatgpt-claude-gemini-perplexity-local-llms) | [Buy me a Coffee](https://ko-fi.com/zeitlings) ☕  
+Created by [Patrick Sy](https://github.com/zeitlings) | [Github](https://github.com/zeitlings/alfred-unified-search) | [Alfred Forum](https://www.alfredforum.com/topic/22350-unified-search/) | [Buy me a Coffee](https://ko-fi.com/zeitlings) ☕  
 ---
 
 
