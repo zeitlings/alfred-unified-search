@@ -6,9 +6,6 @@
 
 Unified Search is an [Alfred](https://www.alfredapp.com/) workflow that provides a unified search experience across multiple web search engines and websites, currently supporting 129 web search instances and extensible through Alfred's internal [custom web search](https://www.alfredapp.com/help/features/web-search/#custom) feature.
 
-> [!NOTE] 
-> Still setting things up, check back in a bit!
-
 ## Usage
 
 ### Unified Search
