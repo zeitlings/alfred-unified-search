@@ -61,6 +61,6 @@ Tap <kbd>⇥</kbd> while __in filter mode__ to elicit a preview, or prefix your 
 
 
 <!-- Unified Search Extra Pane Plugin Preview -->
-<img src="assets/images/preview/plugin.png" width="700px" />
+<img src="assets/images/preview/plugin.png"/>
 
 __Note:__ You can set the relevant [environment variable](https://www.alfredapp.com/help/workflows/advanced/variables/#environment) to `true` to always have the pane enabled.
