@@ -4,7 +4,7 @@
 </div>
 
 
-Unified Search is an [Alfred](https://www.alfredapp.com/) workflow that provides a unified search experience across multiple web search engines and websites, currently supporting 129 web search instances and extensible through Alfred's internal [custom web search](https://www.alfredapp.com/help/features/web-search/#custom) feature.
+Unified Search is an [Alfred](https://www.alfredapp.com/) workflow that provides a unified search experience across multiple web search engines and websites, currently supporting 131 web search instances and extensible through Alfred's internal [custom web search](https://www.alfredapp.com/help/features/web-search/#custom) feature.
 
 ## Usage
 
@@ -52,3 +52,15 @@ You can add specific web searches to the default options or remove them via the 
 - <kbd>⌘</kbd><kbd>↩</kbd> Add to / Remove from defaults
 - <kbd>⌥</kbd><kbd>↩</kbd> Activate / Deactivate web search
 
+
+## Plugin: Extra Pane
+
+You can use *Unified Search* with [Alfred Extra Pane](https://github.com/mr-pennyworth/alfred-extra-pane). 
+
+Tap <kbd>⇥</kbd> while __in filter mode__ to elicit a preview, or prefix your search with `>` manually.  
+
+
+<!-- Unified Search Extra Pane Plugin Preview -->
+<img src="assets/images/preview/plugin.png" width="600px" />
+
+__Note:__ You can set the relevant [environment variable](https://www.alfredapp.com/help/workflows/advanced/variables/#environment) to `true` to always have the pane enabled.

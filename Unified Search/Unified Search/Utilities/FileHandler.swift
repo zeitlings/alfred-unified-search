@@ -34,7 +34,7 @@ struct FileHandler {
 		if Workflow.includeCustomAlfredWebsearches {
 			let customAlfredSearches: [WebSearch] = getAlfredWebSearches()
 			if customAlfredSearches.isEmpty {
-				Workflow.log("Custom Alfred Web-Searches are included, but none were enabled. Enable at least one custom Alfred Websearch to include it in \(Workflow.Env.workflowName == "the workflow").")
+				Workflow.log("Custom Alfred Web-Searches are included, but none were enabled. Enable at least one custom Alfred Websearch to include it in \(Workflow.Env.workflowName ?? "the workflow").")
 			}
 			for customAlfredSearch in customAlfredSearches
 			where webSearches.firstIndex(where: { $0.name == customAlfredSearch.name }) == nil

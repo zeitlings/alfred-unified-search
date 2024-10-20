@@ -9,6 +9,8 @@ import Foundation
 
 extension Workflow {
 	
+	static let injectQuicklook: Bool = envvar("config_always_inject_quicklookurl") == "true"
+	
 	static func envvar(_ key: String) -> String? {
 		Env.environment[key]
 	}

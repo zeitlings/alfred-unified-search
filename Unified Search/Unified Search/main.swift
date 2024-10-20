@@ -8,6 +8,7 @@
 import Foundation
 
 let g_FilterSeperator: String = "||"
+let g_QuicklookHint: Character = ">"
 
 struct Search {
 	
@@ -16,6 +17,10 @@ struct Search {
 	/// Used for autocomplete where  filter  behaviour is `always` and only defaults are shown
 	static let queryFull: String = Workflow.userInput ?? ""
 	static var query: String = queryFull
+	static let queryHasFilterSeperator: Bool = query.firstRange(of: g_FilterSeperator) != nil
+	static var suffixIsExactMatch: Bool = false
+	static var suffix: String = ""
+	static var injectQuicklook: Bool = false
 	static private let fm: FileManager = .default
 	
 	static func run() {
@@ -23,12 +28,18 @@ struct Search {
 			Workflow.info("Please enter text to search for.")
 		}
 		Self.probe()
-		let queryHasFilterSeperator: Bool = query.firstRange(of: g_FilterSeperator) != nil
+		Self.injectQuicklook = getQuicklookHint()
 		let suffix: String? = getFilterHint(suffixMode: queryHasFilterSeperator) // last query component
 		let suffixIsWildcard: Bool = suffix == "*"
 		let webSearches: [WebSearch] = FileHandler.getSearches()
 		guard webSearches.first(where: { $0.isDefault }) != nil else {
 			Workflow.info("At least one search must be configured as default.")
+		}
+		if !suffixIsWildcard, let suffix,
+		   webSearches.first(where: { $0.matches(suffix: suffix) }) != nil
+		{
+			Self.suffixIsExactMatch = true
+			Self.suffix = suffix
 		}
 		
 		var items: [Item] = []

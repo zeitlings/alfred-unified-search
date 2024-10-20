@@ -45,6 +45,12 @@ extension WebSearches {
 			self.isAlfredWebsearch = isAlfredWebsearch
 		}
 		
+		@inline(__always)
+		func matches(suffix: String) -> Bool {
+			let suffix: String = suffix.lowercased()
+			return shorthand?.lowercased() == suffix || name.lowercased() == suffix
+		}
+		
 		func hash(into hasher: inout Hasher) {
 			hasher.combine(name)
 			hasher.combine(url)
@@ -61,12 +67,13 @@ extension WebSearches.WebSearch {
 	
 	func alfredItem(query: String) -> Item? {
 		guard active else { return nil }
-		let arg: Argument = .string(url.replacing(inputPlaceholder, with: query))
+		let arg: String = url.replacing(inputPlaceholder, with: query)
 		return .with {
-			$0.arg = arg
+			$0.arg = .string(arg)
 			$0.title = name
+			$0.uid = name
 			if let isAlfredWebsearch, isAlfredWebsearch {
-				$0.title = name.replacing("{query}", with: "{input}") //+ " (active: \(active))"
+				$0.title = name.replacing("{query}", with: "{input}")
 			}
 			if let icon {
 				if let isAlfredWebsearch, isAlfredWebsearch {
@@ -75,14 +82,27 @@ extension WebSearches.WebSearch {
 					$0.icon = .init(path: "images/icons/\(icon).png")
 				}
 			}
-			$0.autocomplete = Workflow.filterBehaviour == .always
-				? "\(Search.queryFull) \(g_FilterSeperator) "
-				: "\(query) \(g_FilterSeperator) "
+			
+			if Search.injectQuicklook {
+				$0.quicklookurl = arg
+			}
+
+			if !Search.queryHasFilterSeperator {
+				if Search.suffixIsExactMatch {
+					$0.autocomplete = "\(query) \(g_FilterSeperator) \(Search.suffix)"
+				} else {
+					$0.autocomplete = Workflow.filterBehaviour == .always
+						? "\(Search.queryFull) \(g_FilterSeperator) "
+						: "\(query) \(g_FilterSeperator) "
+				}
+			} else if !Search.injectQuicklook {
+				$0.autocomplete = "\(g_QuicklookHint) \(Search.queryFull) "
+			}
 			
 			if let shorthand {
-				$0.shift = .init(arg: arg, subtitle: "Shorthand: \(shorthand)", icon: nil)
+				$0.shift = .init(arg: .string(arg), subtitle: "Shorthand: \(shorthand)", icon: nil)
 			}
-			$0.alt = .init(arg: arg, subtitle: url, icon: nil)
+			$0.alt = .init(arg: .string(arg), subtitle: url, icon: nil)
 		}
 	}
 	

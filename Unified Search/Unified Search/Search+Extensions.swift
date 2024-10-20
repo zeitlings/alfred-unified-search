@@ -10,7 +10,7 @@ import Foundation
 extension Search {
 	
 	static func getFilterHint(suffixMode queryHasFilterSeperator: Bool) -> String? {
-		let components: [String] = query.split(separator: g_FilterSeperator).map(\.trimmed)
+		let components: [String] = Self.query.split(separator: g_FilterSeperator).map(\.trimmed)
 		// If the separator is present, act on it regardless of set behaviour
 		let queryHasFilterSuffix: Bool = components.count > 1
 		
@@ -37,6 +37,16 @@ extension Search {
 			assert(!queryHasFilterSuffix)
 			return nil
 		}
+	}
+	
+	/// Check if the query has the `g_QuicklookHint` prefix or `config_always_inject_quicklookurl` has been set to true to override.
+	/// If the quicklook hint is present, remove it from the query.
+	static func getQuicklookHint() -> Bool {
+		guard Self.query.hasPrefix(.init(g_QuicklookHint)) else {
+			return Workflow.injectQuicklook
+		}
+		Self.query = .init(Self.query.drop(while: { $0 == g_QuicklookHint || $0.isWhitespace }))
+		return true
 	}
 }
 
